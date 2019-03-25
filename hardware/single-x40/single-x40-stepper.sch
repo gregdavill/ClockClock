@@ -1,0 +1,1755 @@
+EESchema Schematic File Version 4
+LIBS:single-x40-stepper-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "ClockClock Module"
+Date "2019-03-23"
+Rev "r0_1"
+Comp "GsD"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L gkl_lattice:MachX02-640 U1
+U 1 1 5C8E2FDC
+P 4350 2700
+F 0 "U1" H 3550 3200 50  0000 C CNN
+F 1 "MachX02-640" H 4950 3200 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm" H 3550 3200 50  0001 C CNN
+F 3 "" H 3550 3200 50  0001 C CNN
+F 4 "Lattice Semiconductor Corporation" H 0   0   50  0001 C CNN "Mfg"
+F 5 "LCMXO2-640HC-4SG48C" H 0   0   50  0001 C CNN "PN"
+	1    4350 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS245 U2
+U 1 1 5C8E742F
+P 6900 3000
+F 0 "U2" H 7150 3650 50  0000 C CNN
+F 1 "74ACT245" H 6600 3650 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 6900 3000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS245" H 6900 3000 50  0001 C CNN
+F 4 "Texas Instruments" H 0   0   50  0001 C CNN "Mfg"
+F 5 "SN74ACT245PWR" H 0   0   50  0001 C CNN "PN"
+	1    6900 3000
+	1    0    0    -1  
+$EndComp
+Text Notes 8600 1100 0    50   ~ 10
+Coil A Voltage
+Text Notes 8600 1250 0    50   ~ 10
+Coil B Voltage\n
+Text Notes 8900 1450 2    50   ~ 10
+Drive Bit Map
+Text Notes 8600 1600 0    50   ~ 10
+Contact 1
+Text Notes 8600 1750 0    50   ~ 10
+Contact 2,3
+Text Notes 8600 1900 0    50   ~ 10
+Contact 4
+Wire Notes Line
+	9200 800  9200 1950
+Text Notes 9250 900  0    50   ~ 10
+1
+Wire Notes Line
+	9350 800  9350 1950
+Text Notes 9400 900  0    50   ~ 10
+2
+Wire Notes Line
+	9500 800  9500 1950
+Text Notes 9550 900  0    50   ~ 10
+3
+Wire Notes Line
+	9650 800  9650 1950
+Text Notes 9700 900  0    50   ~ 10
+4
+Text Notes 9850 900  0    50   ~ 10
+5
+Wire Notes Line
+	9950 800  9950 1950
+Text Notes 10000 900  0    50   ~ 10
+6
+Wire Notes Line width 8 style solid
+	9500 1050 9650 1050
+Wire Notes Line width 8 style solid
+	9950 1050 10100 1050
+Wire Notes Line
+	10100 800  10100 1950
+Wire Notes Line width 8 style solid
+	9500 1300 9800 1300
+Wire Notes Line width 8 style solid
+	9350 1250 9500 1250
+Wire Notes Line width 8 style solid
+	9950 1200 10100 1200
+Wire Notes Line width 8 style solid
+	9800 1250 9950 1250
+Wire Notes Line width 8 style solid
+	9200 1500 9650 1500
+Wire Notes Line
+	9800 800  9800 1950
+Wire Notes Line width 8 style solid
+	9650 1600 10100 1600
+Wire Notes Line width 8 style solid
+	9200 1750 9500 1750
+Wire Notes Line width 8 style solid
+	9500 1650 9950 1650
+Wire Notes Line width 8 style solid
+	9950 1750 10100 1750
+Wire Notes Line width 8 style solid
+	9200 1800 9350 1800
+Wire Notes Line width 8 style solid
+	9350 1900 9800 1900
+Wire Notes Line width 8 style solid
+	9800 1800 10100 1800
+Text Notes 7000 2300 0    50   ~ 10
+SN74ACT245 will output +/- 24mA \nand handle 3.3V -> 5V translation
+Wire Notes Line width 8 style solid
+	9650 1100 9950 1100
+Wire Notes Line width 8 style solid
+	9200 1200 9350 1200
+Wire Notes Line width 8 style solid
+	9200 1000 9500 1000
+Text Notes 8800 2050 0    50   ~ 10
+clockwise\n
+Text Notes 9700 2150 0    50   ~ 10
+counter-clockwise
+Wire Notes Line style solid
+	9200 2050 9650 2050
+Wire Notes Line style solid
+	9550 2000 9650 2050
+Wire Notes Line style solid
+	9650 2100 9200 2100
+Wire Notes Line style solid
+	9300 2150 9200 2100
+$Comp
+L gkl_misc:X40-stepper MOT1
+U 1 1 5C906F05
+P 10000 2950
+F 0 "MOT1" H 10000 3200 50  0000 C CNN
+F 1 "X40-stepper" H 10000 2300 50  0000 C CNN
+F 2 "gkl_misc:X40-stepper" H 10000 3650 50  0001 C CNN
+F 3 "" H 10000 3650 50  0001 C CNN
+	1    10000 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 2700 8400 2700
+Wire Wire Line
+	9600 2700 9600 2850
+Wire Wire Line
+	9600 2850 9700 2850
+Wire Wire Line
+	7400 2800 8500 2800
+Wire Wire Line
+	7400 3100 8950 3100
+Wire Wire Line
+	8950 3100 8950 3900
+Wire Wire Line
+	8950 3900 10300 3900
+Wire Wire Line
+	10650 4000 8850 4000
+Wire Wire Line
+	8850 4000 8850 3200
+Wire Wire Line
+	8850 3200 7400 3200
+$Comp
+L gkl_power:GND #PWR0101
+U 1 1 5C910EB3
+P 6900 3800
+F 0 "#PWR0101" H 6900 3550 50  0001 C CNN
+F 1 "GND" H 6903 3674 50  0000 C CNN
+F 2 "" H 6800 3450 50  0001 C CNN
+F 3 "" H 6900 3800 50  0001 C CNN
+	1    6900 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:+5V #PWR0102
+U 1 1 5C911448
+P 6900 2100
+F 0 "#PWR0102" H 6900 1950 50  0001 C CNN
+F 1 "+5V" H 6903 2251 50  0000 C CNN
+F 2 "" H 6900 2100 50  0001 C CNN
+F 3 "" H 6900 2100 50  0001 C CNN
+	1    6900 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 3400 6300 3400
+Wire Wire Line
+	6300 2150 6900 2150
+Wire Wire Line
+	6300 2150 6300 3400
+Wire Wire Line
+	6900 2200 6900 2150
+Wire Wire Line
+	6900 2150 6900 2100
+Connection ~ 6900 2150
+$Comp
+L gkl_power:+3V3 #PWR0103
+U 1 1 5C91B737
+P 4300 2050
+F 0 "#PWR0103" H 4300 1900 50  0001 C CNN
+F 1 "+3V3" H 4303 2201 50  0000 C CNN
+F 2 "" H 4300 2050 50  0001 C CNN
+F 3 "" H 4300 2050 50  0001 C CNN
+	1    4300 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 2150 4400 2100
+Wire Wire Line
+	4400 2100 4300 2100
+Wire Wire Line
+	4300 2100 4300 2150
+Wire Wire Line
+	4300 2100 4300 2050
+Connection ~ 4300 2100
+$Comp
+L gkl_power:+3V3 #PWR0104
+U 1 1 5C91D4FA
+P 5450 2250
+F 0 "#PWR0104" H 5450 2100 50  0001 C CNN
+F 1 "+3V3" H 5453 2401 50  0000 C CNN
+F 2 "" H 5450 2250 50  0001 C CNN
+F 3 "" H 5450 2250 50  0001 C CNN
+	1    5450 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:+3V3 #PWR0105
+U 1 1 5C91D8AF
+P 3250 2250
+F 0 "#PWR0105" H 3250 2100 50  0001 C CNN
+F 1 "+3V3" H 3253 2401 50  0000 C CNN
+F 2 "" H 3250 2250 50  0001 C CNN
+F 3 "" H 3250 2250 50  0001 C CNN
+	1    3250 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 2400 3250 2400
+Wire Wire Line
+	3250 2400 3250 2250
+Wire Wire Line
+	5350 2400 5450 2400
+Wire Wire Line
+	5450 2400 5450 2250
+Wire Wire Line
+	3250 2400 3250 3800
+Wire Wire Line
+	3250 3800 3350 3800
+Connection ~ 3250 2400
+Wire Wire Line
+	3350 3900 3250 3900
+Wire Wire Line
+	3250 3900 3250 3800
+Connection ~ 3250 3800
+Wire Wire Line
+	5350 3900 5450 3900
+Wire Wire Line
+	5450 3900 5450 3800
+Connection ~ 5450 2400
+Wire Wire Line
+	5350 3800 5450 3800
+Connection ~ 5450 3800
+Wire Wire Line
+	5450 3800 5450 2400
+Wire Wire Line
+	5350 2500 6400 2500
+Wire Wire Line
+	6400 2600 5350 2600
+Wire Wire Line
+	6400 2700 5350 2700
+Wire Wire Line
+	6400 2800 5350 2800
+Wire Wire Line
+	6400 2900 5350 2900
+Wire Wire Line
+	6400 3000 5350 3000
+Wire Wire Line
+	6400 3100 5350 3100
+Wire Wire Line
+	6400 3200 5350 3200
+Wire Wire Line
+	5350 3300 5800 3300
+Wire Wire Line
+	5800 3300 5800 3500
+Wire Wire Line
+	5800 3500 6400 3500
+$Comp
+L Connector:TestPoint_Flag TP11
+U 1 1 5C95ABBB
+P 6600 4750
+F 0 "TP11" H 6860 4844 50  0000 L CNN
+F 1 "TP_TMS" H 6860 4753 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6800 4750 50  0001 C CNN
+F 3 "~" H 6800 4750 50  0001 C CNN
+	1    6600 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Flag TP12
+U 1 1 5C95DDC7
+P 6600 4950
+F 0 "TP12" H 6860 5044 50  0000 L CNN
+F 1 "TP_TCK" H 6860 4953 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6800 4950 50  0001 C CNN
+F 3 "~" H 6800 4950 50  0001 C CNN
+	1    6600 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Flag TP13
+U 1 1 5C95F81F
+P 6600 5150
+F 0 "TP13" H 6860 5244 50  0000 L CNN
+F 1 "TP_TDI" H 6860 5153 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6800 5150 50  0001 C CNN
+F 3 "~" H 6800 5150 50  0001 C CNN
+	1    6600 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Flag TP14
+U 1 1 5C9612D7
+P 6600 5350
+F 0 "TP14" H 6860 5444 50  0000 L CNN
+F 1 "TP_TDO" H 6860 5353 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6800 5350 50  0001 C CNN
+F 3 "~" H 6800 5350 50  0001 C CNN
+	1    6600 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 4600 6300 4600
+Wire Wire Line
+	6300 4600 6300 4750
+Wire Wire Line
+	6300 4750 6600 4750
+Wire Wire Line
+	5350 4700 6200 4700
+Wire Wire Line
+	6200 4700 6200 4950
+Wire Wire Line
+	6200 4950 6450 4950
+Wire Wire Line
+	5350 4800 6100 4800
+Wire Wire Line
+	6100 4800 6100 5150
+Wire Wire Line
+	6100 5150 6600 5150
+Wire Wire Line
+	5350 4900 6000 4900
+Wire Wire Line
+	6000 4900 6000 5350
+Wire Wire Line
+	6000 5350 6600 5350
+$Comp
+L Connector:TestPoint_Flag TP7
+U 1 1 5C96B4C3
+P 6100 3850
+F 0 "TP7" H 6360 3944 50  0000 L CNN
+F 1 "TP_DONE" H 6360 3853 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6300 3850 50  0001 C CNN
+F 3 "~" H 6300 3850 50  0001 C CNN
+	1    6100 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Flag TP8
+U 1 1 5C96B4CD
+P 6100 4050
+F 0 "TP8" H 6360 4144 50  0000 L CNN
+F 1 "TP_INITN" H 6360 4053 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6300 4050 50  0001 C CNN
+F 3 "~" H 6300 4050 50  0001 C CNN
+	1    6100 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Flag TP9
+U 1 1 5C96B4D7
+P 6100 4250
+F 0 "TP9" H 6360 4344 50  0000 L CNN
+F 1 "TP_PROGRAMN" H 6360 4253 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6300 4250 50  0001 C CNN
+F 3 "~" H 6300 4250 50  0001 C CNN
+	1    6100 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Flag TP10
+U 1 1 5C96B4E1
+P 6100 4450
+F 0 "TP10" H 6360 4544 50  0000 L CNN
+F 1 "TP_JTAGEN" H 6360 4453 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 6300 4450 50  0001 C CNN
+F 3 "~" H 6300 4450 50  0001 C CNN
+	1    6100 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 4450 5650 4450
+Wire Wire Line
+	5650 4450 5650 4300
+Wire Wire Line
+	5650 4300 5350 4300
+Wire Wire Line
+	5350 4200 5750 4200
+Wire Wire Line
+	5750 4200 5750 4250
+Wire Wire Line
+	5750 4250 6100 4250
+Wire Wire Line
+	5350 4100 5750 4100
+Wire Wire Line
+	5750 4100 5750 4050
+Wire Wire Line
+	5750 4050 6100 4050
+Wire Wire Line
+	5350 4000 5650 4000
+Wire Wire Line
+	5650 4000 5650 3850
+Wire Wire Line
+	5650 3850 6100 3850
+$Comp
+L Connector:TestPoint_Flag TP5
+U 1 1 5C97C724
+P 5600 5800
+F 0 "TP5" H 5860 5894 50  0000 L CNN
+F 1 "TP_I2C_SDA" H 5860 5803 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 5800 5800 50  0001 C CNN
+F 3 "~" H 5800 5800 50  0001 C CNN
+	1    5600 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Flag TP6
+U 1 1 5C97CB45
+P 5600 6050
+F 0 "TP6" H 5860 6144 50  0000 L CNN
+F 1 "TP_I2C_SCL" H 5860 6053 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 5800 6050 50  0001 C CNN
+F 3 "~" H 5800 6050 50  0001 C CNN
+	1    5600 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 6050 5450 6050
+Wire Wire Line
+	5450 6050 5450 4500
+Wire Wire Line
+	5450 4500 5350 4500
+Wire Wire Line
+	5350 4400 5550 4400
+Wire Wire Line
+	5550 4400 5550 5800
+Wire Wire Line
+	5550 5800 5600 5800
+$Comp
+L Sensor_Magnetic:SM351LT U4
+U 1 1 5C9871BB
+P 2050 5300
+F 0 "U4" H 2350 5650 50  0000 R CNN
+F 1 "TCS40D" H 2350 5550 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2000 5300 50  0001 C CNN
+F 3 "https://sensing.honeywell.com/honeywell-sensing-nanopower-series-product-sheet-50095501-a-en.pdf" H 2000 5300 50  0001 C CNN
+F 4 "Toshiba Semiconductor and Storage" H 0   0   50  0001 C CNN "Mfg"
+F 5 "TCS40DPR,LF" H 0   0   50  0001 C CNN "PN"
+	1    2050 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5C98AF29
+P 1300 5300
+F 0 "C1" H 1415 5346 50  0000 L CNN
+F 1 "100nF" H 1415 5255 50  0000 L CNN
+F 2 "pkl_dipol:C_0402" H 1338 5150 50  0001 C CNN
+F 3 "~" H 1300 5300 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 0   0   50  0001 C CNN "Mfg"
+F 5 "CL05B104KP5NNNC" H 0   0   50  0001 C CNN "PN"
+	1    1300 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 5000 1850 4950
+Wire Wire Line
+	1850 4950 1300 4950
+Wire Wire Line
+	1300 4950 1300 5150
+Wire Wire Line
+	1850 5600 1850 5650
+Wire Wire Line
+	1850 5650 1300 5650
+Wire Wire Line
+	1300 5650 1300 5450
+$Comp
+L gkl_power:+3V3 #PWR0106
+U 1 1 5C992076
+P 1300 4850
+F 0 "#PWR0106" H 1300 4700 50  0001 C CNN
+F 1 "+3V3" H 1303 5001 50  0000 C CNN
+F 2 "" H 1300 4850 50  0001 C CNN
+F 3 "" H 1300 4850 50  0001 C CNN
+	1    1300 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:GND #PWR0107
+U 1 1 5C9925DE
+P 1300 5750
+F 0 "#PWR0107" H 1300 5500 50  0001 C CNN
+F 1 "GND" H 1303 5624 50  0000 C CNN
+F 2 "" H 1200 5400 50  0001 C CNN
+F 3 "" H 1300 5750 50  0001 C CNN
+	1    1300 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 5750 1300 5650
+Connection ~ 1300 5650
+Wire Wire Line
+	1300 4950 1300 4850
+Connection ~ 1300 4950
+$Comp
+L Sensor_Magnetic:SM351LT U5
+U 1 1 5C9B9F9E
+P 2050 6850
+F 0 "U5" H 2350 7200 50  0000 R CNN
+F 1 "TCS40D" H 2350 7100 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2000 6850 50  0001 C CNN
+F 3 "https://sensing.honeywell.com/honeywell-sensing-nanopower-series-product-sheet-50095501-a-en.pdf" H 2000 6850 50  0001 C CNN
+F 4 "Toshiba Semiconductor and Storage" H 0   0   50  0001 C CNN "Mfg"
+F 5 "TCS40DPR,LF" H 0   0   50  0001 C CNN "PN"
+	1    2050 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5C9B9FA8
+P 1300 6850
+F 0 "C2" H 1415 6896 50  0000 L CNN
+F 1 "100nF" H 1415 6805 50  0000 L CNN
+F 2 "pkl_dipol:C_0402" H 1338 6700 50  0001 C CNN
+F 3 "~" H 1300 6850 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 0   0   50  0001 C CNN "Mfg"
+F 5 "CL05B104KP5NNNC" H 0   0   50  0001 C CNN "PN"
+	1    1300 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 6550 1850 6500
+Wire Wire Line
+	1850 6500 1300 6500
+Wire Wire Line
+	1300 6500 1300 6700
+Wire Wire Line
+	1850 7150 1850 7200
+Wire Wire Line
+	1850 7200 1300 7200
+Wire Wire Line
+	1300 7200 1300 7000
+$Comp
+L gkl_power:+3V3 #PWR0108
+U 1 1 5C9B9FB8
+P 1300 6400
+F 0 "#PWR0108" H 1300 6250 50  0001 C CNN
+F 1 "+3V3" H 1303 6551 50  0000 C CNN
+F 2 "" H 1300 6400 50  0001 C CNN
+F 3 "" H 1300 6400 50  0001 C CNN
+	1    1300 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:GND #PWR0109
+U 1 1 5C9B9FC2
+P 1300 7300
+F 0 "#PWR0109" H 1300 7050 50  0001 C CNN
+F 1 "GND" H 1303 7174 50  0000 C CNN
+F 2 "" H 1200 6950 50  0001 C CNN
+F 3 "" H 1300 7300 50  0001 C CNN
+	1    1300 7300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 7300 1300 7200
+Connection ~ 1300 7200
+Wire Wire Line
+	1300 6500 1300 6400
+Connection ~ 1300 6500
+Wire Wire Line
+	2450 5300 2850 5300
+Wire Wire Line
+	2850 5300 2850 4800
+Wire Wire Line
+	2850 4800 3350 4800
+Wire Wire Line
+	2450 6850 2950 6850
+Wire Wire Line
+	2950 6850 2950 4900
+Wire Wire Line
+	2950 4900 3350 4900
+$Comp
+L Connector:TestPoint_Flag TP1
+U 1 1 5C9D07BC
+P 2100 2750
+F 0 "TP1" H 2360 2844 50  0000 L CNN
+F 1 "TP_OUT_A" H 2360 2753 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2300 2750 50  0001 C CNN
+F 3 "~" H 2300 2750 50  0001 C CNN
+	1    2100 2750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Flag TP2
+U 1 1 5C9D07C6
+P 2100 2950
+F 0 "TP2" H 2359 3044 50  0000 L CNN
+F 1 "TP_OUT_B" H 2359 2953 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2300 2950 50  0001 C CNN
+F 3 "~" H 2300 2950 50  0001 C CNN
+	1    2100 2950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Flag TP3
+U 1 1 5C9D07D0
+P 2100 3150
+F 0 "TP3" H 2359 3244 50  0000 L CNN
+F 1 "TP_IN_A" H 2359 3153 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2300 3150 50  0001 C CNN
+F 3 "~" H 2300 3150 50  0001 C CNN
+	1    2100 3150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Flag TP4
+U 1 1 5C9D07DA
+P 2100 3350
+F 0 "TP4" H 2360 3444 50  0000 L CNN
+F 1 "TP_IN_B" H 2360 3353 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 2300 3350 50  0001 C CNN
+F 3 "~" H 2300 3350 50  0001 C CNN
+	1    2100 3350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 3350 2550 3350
+Wire Wire Line
+	2550 3350 2550 3200
+Wire Wire Line
+	2550 3200 3350 3200
+Wire Wire Line
+	3350 3100 2450 3100
+Wire Wire Line
+	2450 3100 2450 3150
+Wire Wire Line
+	2450 3150 2100 3150
+Wire Wire Line
+	3350 3000 2450 3000
+Wire Wire Line
+	2450 3000 2450 2950
+Wire Wire Line
+	2450 2950 2100 2950
+Wire Wire Line
+	3350 2900 2550 2900
+Wire Wire Line
+	2550 2900 2550 2750
+Wire Wire Line
+	2550 2750 2100 2750
+Wire Wire Line
+	10450 3900 10450 3250
+Wire Wire Line
+	10450 3250 10300 3250
+Wire Wire Line
+	10650 2850 10300 2850
+Wire Wire Line
+	10650 2850 10650 4000
+Wire Wire Line
+	7400 3000 9050 3000
+Wire Wire Line
+	9050 3000 9050 3800
+Wire Wire Line
+	9050 3800 9950 3800
+Wire Wire Line
+	10550 3800 10550 3050
+Wire Wire Line
+	10550 3050 10300 3050
+Wire Wire Line
+	7400 2900 9150 2900
+Wire Wire Line
+	9150 2900 9150 3700
+Wire Wire Line
+	9150 3700 9600 3700
+Wire Wire Line
+	10350 3700 10350 3450
+Wire Wire Line
+	10350 3450 10300 3450
+Wire Wire Line
+	9500 2800 9500 3250
+Wire Wire Line
+	9500 3250 9700 3250
+Wire Wire Line
+	7400 2500 8200 2500
+Wire Wire Line
+	9400 2500 9400 3050
+Wire Wire Line
+	9400 3050 9700 3050
+Wire Wire Line
+	9700 3450 9300 3450
+Wire Wire Line
+	9300 3450 9300 2600
+Wire Wire Line
+	9300 2600 8300 2600
+$Comp
+L Regulator_Linear:MCP1703A-1202_SOT23 U3
+U 1 1 5CA97568
+P 4350 6450
+F 0 "U3" H 4350 6692 50  0000 C CNN
+F 1 "MCP1703A" H 4350 6601 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4350 6650 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20005122B.pdf" H 4350 6400 50  0001 C CNN
+F 4 "Microchip Technology" H 0   0   50  0001 C CNN "Mfg"
+F 5 "MCP1703AT-3302E/CB" H 0   0   50  0001 C CNN "PN"
+	1    4350 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:+3V3 #PWR0110
+U 1 1 5CA98B3C
+P 5000 6350
+F 0 "#PWR0110" H 5000 6200 50  0001 C CNN
+F 1 "+3V3" H 5003 6501 50  0000 C CNN
+F 2 "" H 5000 6350 50  0001 C CNN
+F 3 "" H 5000 6350 50  0001 C CNN
+	1    5000 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 6450 5000 6450
+Wire Wire Line
+	5000 6450 5000 6350
+Wire Wire Line
+	4050 6450 3750 6450
+Wire Wire Line
+	3750 6450 3750 6250
+Wire Wire Line
+	4350 6750 4350 6850
+$Comp
+L gkl_power:GND #PWR0111
+U 1 1 5CAA95E4
+P 4350 6850
+F 0 "#PWR0111" H 4350 6600 50  0001 C CNN
+F 1 "GND" H 4353 6724 50  0000 C CNN
+F 2 "" H 4250 6500 50  0001 C CNN
+F 3 "" H 4350 6850 50  0001 C CNN
+	1    4350 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:+5V #PWR0112
+U 1 1 5CAA9ABB
+P 3750 5950
+F 0 "#PWR0112" H 3750 5800 50  0001 C CNN
+F 1 "+5V" H 3753 6101 50  0000 C CNN
+F 2 "" H 3750 5950 50  0001 C CNN
+F 3 "" H 3750 5950 50  0001 C CNN
+	1    3750 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5CAB04F6
+P 3750 6650
+F 0 "C3" H 3636 6696 50  0000 R CNN
+F 1 "100nF" H 3636 6605 50  0000 R CNN
+F 2 "pkl_dipol:C_0402" H 3788 6500 50  0001 C CNN
+F 3 "~" H 3750 6650 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 0   0   50  0001 C CNN "Mfg"
+F 5 "CL05B104KP5NNNC" H 0   0   50  0001 C CNN "PN"
+	1    3750 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 6500 3750 6450
+Connection ~ 3750 6450
+Wire Wire Line
+	3750 6800 3750 7000
+$Comp
+L Device:C C4
+U 1 1 5CAC6EF4
+P 5000 6650
+F 0 "C4" H 5115 6696 50  0000 L CNN
+F 1 "100nF" H 5115 6605 50  0000 L CNN
+F 2 "pkl_dipol:C_0402" H 5038 6500 50  0001 C CNN
+F 3 "~" H 5000 6650 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 0   0   50  0001 C CNN "Mfg"
+F 5 "CL05B104KP5NNNC" H 0   0   50  0001 C CNN "PN"
+	1    5000 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 6500 5000 6450
+Wire Wire Line
+	5000 6800 5000 6850
+Connection ~ 5000 6450
+$Comp
+L gkl_power:GND #PWR0113
+U 1 1 5CAD8224
+P 3750 7150
+F 0 "#PWR0113" H 3750 6900 50  0001 C CNN
+F 1 "GND" H 3753 7024 50  0000 C CNN
+F 2 "" H 3650 6800 50  0001 C CNN
+F 3 "" H 3750 7150 50  0001 C CNN
+	1    3750 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:GND #PWR0114
+U 1 1 5CAD84C9
+P 5000 6850
+F 0 "#PWR0114" H 5000 6600 50  0001 C CNN
+F 1 "GND" H 5003 6724 50  0000 C CNN
+F 2 "" H 4900 6500 50  0001 C CNN
+F 3 "" H 5000 6850 50  0001 C CNN
+	1    5000 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:+3V3 #PWR0115
+U 1 1 5CAE6224
+P 1200 900
+F 0 "#PWR0115" H 1200 750 50  0001 C CNN
+F 1 "+3V3" H 1203 1051 50  0000 C CNN
+F 2 "" H 1200 900 50  0001 C CNN
+F 3 "" H 1200 900 50  0001 C CNN
+	1    1200 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 5CAE6230
+P 1200 1100
+F 0 "C6" H 1315 1146 50  0000 L CNN
+F 1 "100nF" H 1315 1055 50  0000 L CNN
+F 2 "pkl_dipol:C_0402" H 1238 950 50  0001 C CNN
+F 3 "~" H 1200 1100 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 0   0   50  0001 C CNN "Mfg"
+F 5 "CL05B104KP5NNNC" H 0   0   50  0001 C CNN "PN"
+	1    1200 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 1250 1200 1300
+$Comp
+L gkl_power:GND #PWR0116
+U 1 1 5CAE623D
+P 1200 1300
+F 0 "#PWR0116" H 1200 1050 50  0001 C CNN
+F 1 "GND" H 1203 1174 50  0000 C CNN
+F 2 "" H 1100 950 50  0001 C CNN
+F 3 "" H 1200 1300 50  0001 C CNN
+	1    1200 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 900  1200 950 
+$Comp
+L gkl_power:+3V3 #PWR0117
+U 1 1 5CAF8D47
+P 1650 900
+F 0 "#PWR0117" H 1650 750 50  0001 C CNN
+F 1 "+3V3" H 1653 1051 50  0000 C CNN
+F 2 "" H 1650 900 50  0001 C CNN
+F 3 "" H 1650 900 50  0001 C CNN
+	1    1650 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C8
+U 1 1 5CAF8D51
+P 1650 1100
+F 0 "C8" H 1765 1146 50  0000 L CNN
+F 1 "100nF" H 1765 1055 50  0000 L CNN
+F 2 "pkl_dipol:C_0402" H 1688 950 50  0001 C CNN
+F 3 "~" H 1650 1100 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 0   0   50  0001 C CNN "Mfg"
+F 5 "CL05B104KP5NNNC" H 0   0   50  0001 C CNN "PN"
+	1    1650 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 1250 1650 1300
+$Comp
+L gkl_power:GND #PWR0118
+U 1 1 5CAF8D5C
+P 1650 1300
+F 0 "#PWR0118" H 1650 1050 50  0001 C CNN
+F 1 "GND" H 1653 1174 50  0000 C CNN
+F 2 "" H 1550 950 50  0001 C CNN
+F 3 "" H 1650 1300 50  0001 C CNN
+	1    1650 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 900  1650 950 
+$Comp
+L gkl_power:+3V3 #PWR0119
+U 1 1 5CAFFE4F
+P 2100 900
+F 0 "#PWR0119" H 2100 750 50  0001 C CNN
+F 1 "+3V3" H 2103 1051 50  0000 C CNN
+F 2 "" H 2100 900 50  0001 C CNN
+F 3 "" H 2100 900 50  0001 C CNN
+	1    2100 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C9
+U 1 1 5CAFFE59
+P 2100 1100
+F 0 "C9" H 2215 1146 50  0000 L CNN
+F 1 "100nF" H 2215 1055 50  0000 L CNN
+F 2 "pkl_dipol:C_0402" H 2138 950 50  0001 C CNN
+F 3 "~" H 2100 1100 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 0   0   50  0001 C CNN "Mfg"
+F 5 "CL05B104KP5NNNC" H 0   0   50  0001 C CNN "PN"
+	1    2100 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 1250 2100 1300
+$Comp
+L gkl_power:GND #PWR0120
+U 1 1 5CAFFE64
+P 2100 1300
+F 0 "#PWR0120" H 2100 1050 50  0001 C CNN
+F 1 "GND" H 2103 1174 50  0000 C CNN
+F 2 "" H 2000 950 50  0001 C CNN
+F 3 "" H 2100 1300 50  0001 C CNN
+	1    2100 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 900  2100 950 
+$Comp
+L gkl_power:+3V3 #PWR0121
+U 1 1 5CAFFE6F
+P 2550 900
+F 0 "#PWR0121" H 2550 750 50  0001 C CNN
+F 1 "+3V3" H 2553 1051 50  0000 C CNN
+F 2 "" H 2550 900 50  0001 C CNN
+F 3 "" H 2550 900 50  0001 C CNN
+	1    2550 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C10
+U 1 1 5CAFFE79
+P 2550 1100
+F 0 "C10" H 2665 1146 50  0000 L CNN
+F 1 "100nF" H 2665 1055 50  0000 L CNN
+F 2 "pkl_dipol:C_0402" H 2588 950 50  0001 C CNN
+F 3 "~" H 2550 1100 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 0   0   50  0001 C CNN "Mfg"
+F 5 "CL05B104KP5NNNC" H 0   0   50  0001 C CNN "PN"
+	1    2550 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 1250 2550 1300
+$Comp
+L gkl_power:GND #PWR0122
+U 1 1 5CAFFE84
+P 2550 1300
+F 0 "#PWR0122" H 2550 1050 50  0001 C CNN
+F 1 "GND" H 2553 1174 50  0000 C CNN
+F 2 "" H 2450 950 50  0001 C CNN
+F 3 "" H 2550 1300 50  0001 C CNN
+	1    2550 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 900  2550 950 
+$Comp
+L gkl_power:+3V3 #PWR0123
+U 1 1 5CB07C53
+P 3000 900
+F 0 "#PWR0123" H 3000 750 50  0001 C CNN
+F 1 "+3V3" H 3003 1051 50  0000 C CNN
+F 2 "" H 3000 900 50  0001 C CNN
+F 3 "" H 3000 900 50  0001 C CNN
+	1    3000 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C11
+U 1 1 5CB07C5D
+P 3000 1100
+F 0 "C11" H 3115 1146 50  0000 L CNN
+F 1 "100nF" H 3115 1055 50  0000 L CNN
+F 2 "pkl_dipol:C_0402" H 3038 950 50  0001 C CNN
+F 3 "~" H 3000 1100 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 0   0   50  0001 C CNN "Mfg"
+F 5 "CL05B104KP5NNNC" H 0   0   50  0001 C CNN "PN"
+	1    3000 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 1250 3000 1300
+$Comp
+L gkl_power:GND #PWR0124
+U 1 1 5CB07C68
+P 3000 1300
+F 0 "#PWR0124" H 3000 1050 50  0001 C CNN
+F 1 "GND" H 3003 1174 50  0000 C CNN
+F 2 "" H 2900 950 50  0001 C CNN
+F 3 "" H 3000 1300 50  0001 C CNN
+	1    3000 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 900  3000 950 
+$Comp
+L gkl_power:+3V3 #PWR0125
+U 1 1 5CB07C73
+P 3450 900
+F 0 "#PWR0125" H 3450 750 50  0001 C CNN
+F 1 "+3V3" H 3453 1051 50  0000 C CNN
+F 2 "" H 3450 900 50  0001 C CNN
+F 3 "" H 3450 900 50  0001 C CNN
+	1    3450 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C12
+U 1 1 5CB07C7D
+P 3450 1100
+F 0 "C12" H 3565 1146 50  0000 L CNN
+F 1 "100nF" H 3565 1055 50  0000 L CNN
+F 2 "pkl_dipol:C_0402" H 3488 950 50  0001 C CNN
+F 3 "~" H 3450 1100 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 0   0   50  0001 C CNN "Mfg"
+F 5 "CL05B104KP5NNNC" H 0   0   50  0001 C CNN "PN"
+	1    3450 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 1250 3450 1300
+$Comp
+L gkl_power:GND #PWR0126
+U 1 1 5CB07C88
+P 3450 1300
+F 0 "#PWR0126" H 3450 1050 50  0001 C CNN
+F 1 "GND" H 3453 1174 50  0000 C CNN
+F 2 "" H 3350 950 50  0001 C CNN
+F 3 "" H 3450 1300 50  0001 C CNN
+	1    3450 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 900  3450 950 
+$Comp
+L gkl_power:+3V3 #PWR0127
+U 1 1 5CB07C93
+P 3900 900
+F 0 "#PWR0127" H 3900 750 50  0001 C CNN
+F 1 "+3V3" H 3903 1051 50  0000 C CNN
+F 2 "" H 3900 900 50  0001 C CNN
+F 3 "" H 3900 900 50  0001 C CNN
+	1    3900 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C13
+U 1 1 5CB07C9D
+P 3900 1100
+F 0 "C13" H 4015 1146 50  0000 L CNN
+F 1 "100nF" H 4015 1055 50  0000 L CNN
+F 2 "pkl_dipol:C_0402" H 3938 950 50  0001 C CNN
+F 3 "~" H 3900 1100 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 0   0   50  0001 C CNN "Mfg"
+F 5 "CL05B104KP5NNNC" H 0   0   50  0001 C CNN "PN"
+	1    3900 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 1250 3900 1300
+$Comp
+L gkl_power:GND #PWR0128
+U 1 1 5CB07CA8
+P 3900 1300
+F 0 "#PWR0128" H 3900 1050 50  0001 C CNN
+F 1 "GND" H 3903 1174 50  0000 C CNN
+F 2 "" H 3800 950 50  0001 C CNN
+F 3 "" H 3900 1300 50  0001 C CNN
+	1    3900 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 900  3900 950 
+$Comp
+L gkl_power:+3V3 #PWR0129
+U 1 1 5CB07CB3
+P 4350 900
+F 0 "#PWR0129" H 4350 750 50  0001 C CNN
+F 1 "+3V3" H 4353 1051 50  0000 C CNN
+F 2 "" H 4350 900 50  0001 C CNN
+F 3 "" H 4350 900 50  0001 C CNN
+	1    4350 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C14
+U 1 1 5CB07CBD
+P 4350 1100
+F 0 "C14" H 4465 1146 50  0000 L CNN
+F 1 "100nF" H 4465 1055 50  0000 L CNN
+F 2 "pkl_dipol:C_0402" H 4388 950 50  0001 C CNN
+F 3 "~" H 4350 1100 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 0   0   50  0001 C CNN "Mfg"
+F 5 "CL05B104KP5NNNC" H 0   0   50  0001 C CNN "PN"
+	1    4350 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 1250 4350 1300
+$Comp
+L gkl_power:GND #PWR0130
+U 1 1 5CB07CC8
+P 4350 1300
+F 0 "#PWR0130" H 4350 1050 50  0001 C CNN
+F 1 "GND" H 4353 1174 50  0000 C CNN
+F 2 "" H 4250 950 50  0001 C CNN
+F 3 "" H 4350 1300 50  0001 C CNN
+	1    4350 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 900  4350 950 
+$Comp
+L Device:C C5
+U 1 1 5CB1EBAF
+P 5650 1100
+F 0 "C5" H 5765 1146 50  0000 L CNN
+F 1 "100nF" H 5765 1055 50  0000 L CNN
+F 2 "pkl_dipol:C_0402" H 5688 950 50  0001 C CNN
+F 3 "~" H 5650 1100 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 350 0   50  0001 C CNN "Mfg"
+F 5 "CL05B104KP5NNNC" H 350 0   50  0001 C CNN "PN"
+	1    5650 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 1250 5650 1300
+$Comp
+L gkl_power:GND #PWR0131
+U 1 1 5CB1EBBA
+P 5650 1300
+F 0 "#PWR0131" H 5650 1050 50  0001 C CNN
+F 1 "GND" H 5653 1174 50  0000 C CNN
+F 2 "" H 5550 950 50  0001 C CNN
+F 3 "" H 5650 1300 50  0001 C CNN
+	1    5650 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 900  5650 950 
+$Comp
+L Device:C C7
+U 1 1 5CB1EBCF
+P 6100 1100
+F 0 "C7" H 6215 1146 50  0000 L CNN
+F 1 "100nF" H 6215 1055 50  0000 L CNN
+F 2 "pkl_dipol:C_0402" H 6138 950 50  0001 C CNN
+F 3 "~" H 6100 1100 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 350 0   50  0001 C CNN "Mfg"
+F 5 "CL05B104KP5NNNC" H 350 0   50  0001 C CNN "PN"
+	1    6100 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 1250 6100 1300
+$Comp
+L gkl_power:GND #PWR0132
+U 1 1 5CB1EBDA
+P 6100 1300
+F 0 "#PWR0132" H 6100 1050 50  0001 C CNN
+F 1 "GND" H 6103 1174 50  0000 C CNN
+F 2 "" H 6000 950 50  0001 C CNN
+F 3 "" H 6100 1300 50  0001 C CNN
+	1    6100 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 900  6100 950 
+$Comp
+L gkl_power:+5V #PWR0133
+U 1 1 5CB28BC3
+P 6100 900
+F 0 "#PWR0133" H 6100 750 50  0001 C CNN
+F 1 "+5V" H 6103 1051 50  0000 C CNN
+F 2 "" H 6100 900 50  0001 C CNN
+F 3 "" H 6100 900 50  0001 C CNN
+	1    6100 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:+5V #PWR0134
+U 1 1 5CB28F61
+P 5650 900
+F 0 "#PWR0134" H 5650 750 50  0001 C CNN
+F 1 "+5V" H 5653 1051 50  0000 C CNN
+F 2 "" H 5650 900 50  0001 C CNN
+F 3 "" H 5650 900 50  0001 C CNN
+	1    5650 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BAT54S D1
+U 1 1 5CB89BCE
+P 8000 5100
+F 0 "D1" V 8200 4950 50  0000 L CNN
+F 1 "BAT54S" H 8000 5234 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 8075 5225 50  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 7880 5100 50  0001 C CNN
+F 4 "BAT54SWT1G" H 8000 5100 50  0001 C CNN "PN"
+F 5 "ON Semiconductor" H 8000 5100 50  0001 C CNN "Mfg"
+	1    8000 5100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8000 4800 8000 4700
+Wire Wire Line
+	8000 5400 8000 5500
+$Comp
+L gkl_power:GND #PWR0135
+U 1 1 5CBA6076
+P 8000 5500
+F 0 "#PWR0135" H 8000 5250 50  0001 C CNN
+F 1 "GND" H 8003 5374 50  0000 C CNN
+F 2 "" H 7900 5150 50  0001 C CNN
+F 3 "" H 8000 5500 50  0001 C CNN
+	1    8000 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:+5V #PWR0136
+U 1 1 5CBA6416
+P 8000 4700
+F 0 "#PWR0136" H 8000 4550 50  0001 C CNN
+F 1 "+5V" H 8003 4851 50  0000 C CNN
+F 2 "" H 8000 4700 50  0001 C CNN
+F 3 "" H 8000 4700 50  0001 C CNN
+	1    8000 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BAT54S D2
+U 1 1 5CBBFCE9
+P 8350 5100
+F 0 "D2" V 8550 4950 50  0000 L CNN
+F 1 "BAT54S" H 8350 5234 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 8425 5225 50  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 8230 5100 50  0001 C CNN
+F 4 "BAT54SWT1G" H 8350 5100 50  0001 C CNN "PN"
+F 5 "ON Semiconductor" H 8350 5100 50  0001 C CNN "Mfg"
+	1    8350 5100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8350 4800 8350 4700
+Wire Wire Line
+	8350 5400 8350 5500
+$Comp
+L gkl_power:GND #PWR0137
+U 1 1 5CBBFCF5
+P 8350 5500
+F 0 "#PWR0137" H 8350 5250 50  0001 C CNN
+F 1 "GND" H 8353 5374 50  0000 C CNN
+F 2 "" H 8250 5150 50  0001 C CNN
+F 3 "" H 8350 5500 50  0001 C CNN
+	1    8350 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:+5V #PWR0138
+U 1 1 5CBBFCFF
+P 8350 4700
+F 0 "#PWR0138" H 8350 4550 50  0001 C CNN
+F 1 "+5V" H 8353 4851 50  0000 C CNN
+F 2 "" H 8350 4700 50  0001 C CNN
+F 3 "" H 8350 4700 50  0001 C CNN
+	1    8350 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BAT54S D3
+U 1 1 5CBC8BD4
+P 8700 5100
+F 0 "D3" V 8900 4950 50  0000 L CNN
+F 1 "BAT54S" H 8700 5234 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 8775 5225 50  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 8580 5100 50  0001 C CNN
+F 4 "BAT54SWT1G" H 8700 5100 50  0001 C CNN "PN"
+F 5 "ON Semiconductor" H 8700 5100 50  0001 C CNN "Mfg"
+	1    8700 5100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8700 4800 8700 4700
+Wire Wire Line
+	8700 5400 8700 5500
+$Comp
+L gkl_power:GND #PWR0139
+U 1 1 5CBC8BE0
+P 8700 5500
+F 0 "#PWR0139" H 8700 5250 50  0001 C CNN
+F 1 "GND" H 8703 5374 50  0000 C CNN
+F 2 "" H 8600 5150 50  0001 C CNN
+F 3 "" H 8700 5500 50  0001 C CNN
+	1    8700 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:+5V #PWR0140
+U 1 1 5CBC8BEA
+P 8700 4700
+F 0 "#PWR0140" H 8700 4550 50  0001 C CNN
+F 1 "+5V" H 8703 4851 50  0000 C CNN
+F 2 "" H 8700 4700 50  0001 C CNN
+F 3 "" H 8700 4700 50  0001 C CNN
+	1    8700 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BAT54S D4
+U 1 1 5CBC8BF7
+P 9050 5100
+F 0 "D4" V 9250 4950 50  0000 L CNN
+F 1 "BAT54S" H 9050 5234 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 9125 5225 50  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 8930 5100 50  0001 C CNN
+F 4 "BAT54SWT1G" H 9050 5100 50  0001 C CNN "PN"
+F 5 "ON Semiconductor" H 9050 5100 50  0001 C CNN "Mfg"
+	1    9050 5100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9050 4800 9050 4700
+Wire Wire Line
+	9050 5400 9050 5500
+$Comp
+L gkl_power:GND #PWR0141
+U 1 1 5CBC8C03
+P 9050 5500
+F 0 "#PWR0141" H 9050 5250 50  0001 C CNN
+F 1 "GND" H 9053 5374 50  0000 C CNN
+F 2 "" H 8950 5150 50  0001 C CNN
+F 3 "" H 9050 5500 50  0001 C CNN
+	1    9050 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:+5V #PWR0142
+U 1 1 5CBC8C0D
+P 9050 4700
+F 0 "#PWR0142" H 9050 4550 50  0001 C CNN
+F 1 "+5V" H 9053 4851 50  0000 C CNN
+F 2 "" H 9050 4700 50  0001 C CNN
+F 3 "" H 9050 4700 50  0001 C CNN
+	1    9050 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BAT54S D5
+U 1 1 5CBD3E00
+P 9400 5100
+F 0 "D5" V 9600 4950 50  0000 L CNN
+F 1 "BAT54S" H 9400 5234 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 9475 5225 50  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 9280 5100 50  0001 C CNN
+F 4 "BAT54SWT1G" H 9400 5100 50  0001 C CNN "PN"
+F 5 "ON Semiconductor" H 9400 5100 50  0001 C CNN "Mfg"
+	1    9400 5100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9400 4800 9400 4700
+Wire Wire Line
+	9400 5400 9400 5500
+$Comp
+L gkl_power:GND #PWR0143
+U 1 1 5CBD3E0C
+P 9400 5500
+F 0 "#PWR0143" H 9400 5250 50  0001 C CNN
+F 1 "GND" H 9403 5374 50  0000 C CNN
+F 2 "" H 9300 5150 50  0001 C CNN
+F 3 "" H 9400 5500 50  0001 C CNN
+	1    9400 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:+5V #PWR0144
+U 1 1 5CBD3E16
+P 9400 4700
+F 0 "#PWR0144" H 9400 4550 50  0001 C CNN
+F 1 "+5V" H 9403 4851 50  0000 C CNN
+F 2 "" H 9400 4700 50  0001 C CNN
+F 3 "" H 9400 4700 50  0001 C CNN
+	1    9400 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BAT54S D6
+U 1 1 5CBD3E23
+P 9750 5100
+F 0 "D6" V 9950 4950 50  0000 L CNN
+F 1 "BAT54S" H 9750 5234 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 9825 5225 50  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 9630 5100 50  0001 C CNN
+F 4 "BAT54SWT1G" H 9750 5100 50  0001 C CNN "PN"
+F 5 "ON Semiconductor" H 9750 5100 50  0001 C CNN "Mfg"
+	1    9750 5100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9750 4800 9750 4700
+Wire Wire Line
+	9750 5400 9750 5500
+$Comp
+L gkl_power:GND #PWR0145
+U 1 1 5CBD3E2F
+P 9750 5500
+F 0 "#PWR0145" H 9750 5250 50  0001 C CNN
+F 1 "GND" H 9753 5374 50  0000 C CNN
+F 2 "" H 9650 5150 50  0001 C CNN
+F 3 "" H 9750 5500 50  0001 C CNN
+	1    9750 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:+5V #PWR0146
+U 1 1 5CBD3E39
+P 9750 4700
+F 0 "#PWR0146" H 9750 4550 50  0001 C CNN
+F 1 "+5V" H 9753 4851 50  0000 C CNN
+F 2 "" H 9750 4700 50  0001 C CNN
+F 3 "" H 9750 4700 50  0001 C CNN
+	1    9750 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BAT54S D7
+U 1 1 5CBD3E46
+P 10100 5100
+F 0 "D7" V 10300 4950 50  0000 L CNN
+F 1 "BAT54S" H 10100 5234 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 10175 5225 50  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 9980 5100 50  0001 C CNN
+F 4 "BAT54SWT1G" H 10100 5100 50  0001 C CNN "PN"
+F 5 "ON Semiconductor" H 10100 5100 50  0001 C CNN "Mfg"
+	1    10100 5100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10100 4800 10100 4700
+Wire Wire Line
+	10100 5400 10100 5500
+$Comp
+L gkl_power:GND #PWR0147
+U 1 1 5CBD3E52
+P 10100 5500
+F 0 "#PWR0147" H 10100 5250 50  0001 C CNN
+F 1 "GND" H 10103 5374 50  0000 C CNN
+F 2 "" H 10000 5150 50  0001 C CNN
+F 3 "" H 10100 5500 50  0001 C CNN
+	1    10100 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:+5V #PWR0148
+U 1 1 5CBD3E5C
+P 10100 4700
+F 0 "#PWR0148" H 10100 4550 50  0001 C CNN
+F 1 "+5V" H 10103 4851 50  0000 C CNN
+F 2 "" H 10100 4700 50  0001 C CNN
+F 3 "" H 10100 4700 50  0001 C CNN
+	1    10100 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BAT54S D8
+U 1 1 5CBD3E69
+P 10450 5100
+F 0 "D8" V 10650 4950 50  0000 L CNN
+F 1 "BAT54S" H 10450 5234 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 10525 5225 50  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds11005.pdf" H 10330 5100 50  0001 C CNN
+F 4 "BAT54SWT1G" H 10450 5100 50  0001 C CNN "PN"
+F 5 "ON Semiconductor" H 10450 5100 50  0001 C CNN "Mfg"
+	1    10450 5100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10450 4800 10450 4700
+Wire Wire Line
+	10450 5400 10450 5500
+$Comp
+L gkl_power:GND #PWR0149
+U 1 1 5CBD3E75
+P 10450 5500
+F 0 "#PWR0149" H 10450 5250 50  0001 C CNN
+F 1 "GND" H 10453 5374 50  0000 C CNN
+F 2 "" H 10350 5150 50  0001 C CNN
+F 3 "" H 10450 5500 50  0001 C CNN
+	1    10450 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:+5V #PWR0150
+U 1 1 5CBD3E7F
+P 10450 4700
+F 0 "#PWR0150" H 10450 4550 50  0001 C CNN
+F 1 "+5V" H 10453 4851 50  0000 C CNN
+F 2 "" H 10450 4700 50  0001 C CNN
+F 3 "" H 10450 4700 50  0001 C CNN
+	1    10450 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10650 4000 10650 5100
+Connection ~ 10650 4000
+Wire Wire Line
+	10300 3900 10300 5100
+Connection ~ 10300 3900
+Wire Wire Line
+	10300 3900 10450 3900
+Wire Wire Line
+	9950 3800 9950 5100
+Connection ~ 9950 3800
+Wire Wire Line
+	9950 3800 10550 3800
+Wire Wire Line
+	9600 3700 9600 5100
+Connection ~ 9600 3700
+Wire Wire Line
+	9600 3700 10350 3700
+Wire Wire Line
+	9250 4100 8500 4100
+Wire Wire Line
+	8500 4100 8500 2800
+Wire Wire Line
+	9250 4100 9250 5100
+Connection ~ 8500 2800
+Wire Wire Line
+	8500 2800 9500 2800
+Wire Wire Line
+	8900 4200 8400 4200
+Wire Wire Line
+	8400 4200 8400 2700
+Wire Wire Line
+	8900 4200 8900 5100
+Connection ~ 8400 2700
+Wire Wire Line
+	8400 2700 9600 2700
+Wire Wire Line
+	8550 4300 8300 4300
+Wire Wire Line
+	8300 4300 8300 2600
+Wire Wire Line
+	8550 4300 8550 5100
+Connection ~ 8300 2600
+Wire Wire Line
+	8300 2600 7400 2600
+Connection ~ 8200 2500
+Wire Wire Line
+	8200 2500 9400 2500
+Wire Wire Line
+	8200 2500 8200 5100
+$Comp
+L Connector:TestPoint_Flag TP16
+U 1 1 5CD658C0
+P 3750 6250
+F 0 "TP16" H 4009 6344 50  0000 L CNN
+F 1 "TP_VCC" H 4009 6253 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3950 6250 50  0001 C CNN
+F 3 "~" H 3950 6250 50  0001 C CNN
+	1    3750 6250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Flag TP15
+U 1 1 5CD677B5
+P 3750 6150
+F 0 "TP15" H 3706 6244 50  0000 R CNN
+F 1 "TP_VCC" H 3706 6153 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3950 6150 50  0001 C CNN
+F 3 "~" H 3950 6150 50  0001 C CNN
+	1    3750 6150
+	-1   0    0    -1  
+$EndComp
+Connection ~ 3750 6150
+Wire Wire Line
+	3750 6150 3750 5950
+Connection ~ 3750 6250
+Wire Wire Line
+	3750 6250 3750 6150
+$Comp
+L Connector:TestPoint_Flag TP18
+U 1 1 5CD93776
+P 3750 7100
+F 0 "TP18" H 4009 7194 50  0000 L CNN
+F 1 "TP_GND" H 4009 7103 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3950 7100 50  0001 C CNN
+F 3 "~" H 3950 7100 50  0001 C CNN
+	1    3750 7100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Flag TP17
+U 1 1 5CD93780
+P 3750 7000
+F 0 "TP17" H 3706 7094 50  0000 R CNN
+F 1 "TP_GND" H 3706 7003 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3950 7000 50  0001 C CNN
+F 3 "~" H 3950 7000 50  0001 C CNN
+	1    3750 7000
+	-1   0    0    -1  
+$EndComp
+Connection ~ 3750 7000
+Wire Wire Line
+	3750 7000 3750 7100
+Connection ~ 3750 7100
+Wire Wire Line
+	3750 7100 3750 7150
+Text Notes 7900 5950 0    50   ~ 10
+Flyback diodes to protect the electronics \nfrom any reverse currents or inductive spikes\n(Potentially un-needed for the currents/inductances we're dealing with.)
+$Comp
+L gkl_power:GND #PWR0151
+U 1 1 5CE3DD6A
+P 4300 5150
+F 0 "#PWR0151" H 4300 4900 50  0001 C CNN
+F 1 "GND" H 4303 5024 50  0000 C CNN
+F 2 "" H 4200 4800 50  0001 C CNN
+F 3 "" H 4300 5150 50  0001 C CNN
+	1    4300 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L gkl_power:+3V3 #PWR0152
+U 1 1 5C97A65E
+P 4800 900
+F 0 "#PWR0152" H 4800 750 50  0001 C CNN
+F 1 "+3V3" H 4803 1051 50  0000 C CNN
+F 2 "" H 4800 900 50  0001 C CNN
+F 3 "" H 4800 900 50  0001 C CNN
+	1    4800 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C15
+U 1 1 5C97A66A
+P 4800 1100
+F 0 "C15" H 4915 1146 50  0000 L CNN
+F 1 "1uF" H 4915 1055 50  0000 L CNN
+F 2 "pkl_dipol:C_0603" H 4838 950 50  0001 C CNN
+F 3 "~" H 4800 1100 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 450 0   50  0001 C CNN "Mfg"
+F 5 "CL10A106MP8NNNC" H 0   0   50  0001 C CNN "PN"
+	1    4800 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 1250 4800 1300
+$Comp
+L gkl_power:GND #PWR0153
+U 1 1 5C97A675
+P 4800 1300
+F 0 "#PWR0153" H 4800 1050 50  0001 C CNN
+F 1 "GND" H 4803 1174 50  0000 C CNN
+F 2 "" H 4700 950 50  0001 C CNN
+F 3 "" H 4800 1300 50  0001 C CNN
+	1    4800 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 900  4800 950 
+Wire Wire Line
+	6550 1250 6550 1300
+$Comp
+L gkl_power:GND #PWR0154
+U 1 1 5C97A68D
+P 6550 1300
+F 0 "#PWR0154" H 6550 1050 50  0001 C CNN
+F 1 "GND" H 6553 1174 50  0000 C CNN
+F 2 "" H 6450 950 50  0001 C CNN
+F 3 "" H 6550 1300 50  0001 C CNN
+	1    6550 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 900  6550 950 
+$Comp
+L gkl_power:+5V #PWR0155
+U 1 1 5C97A698
+P 6550 900
+F 0 "#PWR0155" H 6550 750 50  0001 C CNN
+F 1 "+5V" H 6553 1051 50  0000 C CNN
+F 2 "" H 6550 900 50  0001 C CNN
+F 3 "" H 6550 900 50  0001 C CNN
+	1    6550 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C16
+U 1 1 5C988749
+P 6550 1100
+F 0 "C16" H 6665 1146 50  0000 L CNN
+F 1 "1uF" H 6665 1055 50  0000 L CNN
+F 2 "pkl_dipol:C_0603" H 6588 950 50  0001 C CNN
+F 3 "~" H 6550 1100 50  0001 C CNN
+F 4 "Samsung Electro-Mechanics" H 2200 0   50  0001 C CNN "Mfg"
+F 5 "CL10A106MP8NNNC" H 0   0   50  0001 C CNN "PN"
+	1    6550 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5C9CF6C6
+P 6450 5650
+F 0 "R1" H 6520 5696 50  0000 L CNN
+F 1 "4k7" H 6520 5605 50  0000 L CNN
+F 2 "pkl_dipol:R_0402" V 6380 5650 50  0001 C CNN
+F 3 "~" H 6450 5650 50  0001 C CNN
+F 4 "Stackpole Electronics Inc" H 0   0   50  0001 C CNN "Mfg"
+F 5 "RMCF0402FT4K70" H 0   0   50  0001 C CNN "PN"
+	1    6450 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 5500 6450 4950
+Connection ~ 6450 4950
+Wire Wire Line
+	6450 4950 6600 4950
+Wire Wire Line
+	6450 5800 6450 5950
+$Comp
+L gkl_power:GND #PWR0156
+U 1 1 5C9E72B2
+P 6450 5950
+F 0 "#PWR0156" H 6450 5700 50  0001 C CNN
+F 1 "GND" H 6453 5824 50  0000 C CNN
+F 2 "" H 6350 5600 50  0001 C CNN
+F 3 "" H 6450 5950 50  0001 C CNN
+	1    6450 5950
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
